@@ -1,0 +1,162 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    height:100%;
+    width:100%;
+}
+body{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    min-height: 100vh;
+    background-image: repeating-linear-gradient(to right,#fdc239 ,#755303);
+    /* position: relative; */
+}
+form{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    border-radius: 20px;
+    height: 400px;
+    width: 400px;
+    border: 5px solid #936801;
+    /* border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%; */
+    box-shadow: inset 10px 10px 10px black,inset -10px -10px 10px black;
+    position: relative;
+    /*  right: 200px; */
+ 
+}
+.head h1{
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    color: #936801;
+    /* text-shadow: inset 10px 10px 10px black; */
+}
+.txt-box{
+    display: grid;
+    width: 350px;
+    height: 20  0px;
+    /* border: 2px solid red; */
+}
+.txt-box .input{
+    margin-top: 20px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(238, 236, 236);
+    /* border-bottom: 2px solid black; */
+    outline: none;
+    font-weight: 600;
+    padding: 20px;
+    /* box-shadow:inset  5px 5px 5px black;     */
+}
+.txt-box .input:hover{
+    box-shadow: 5px 5px 10px black;
+}
+
+.empty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 350px;
+    width: 200pxpx;
+    border: 5px solid #936801;
+    /* background-image: url("reg.png"); */
+    box-shadow: inset 10px 10px 10px black;
+    /* background-repeat: no-repeat;
+    background-size: 300px 300px; */
+    background-position: center;
+    background-color: #fff;
+     border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    /* border: 2px solid black; */
+}
+.innerempty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;width: 250px;
+    /* border: 2px solid black; */
+}
+.innerempty button{
+    width: 120px;height: 50px;
+    background-color: #fff;
+    border: 2px solid #936801 ;
+    font-size: 1.2rem;
+    color: #936801;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: ease-in 0.3s;
+}
+.innerempty button:hover{
+    color: #fff;
+    background-color: #936801;
+}
+.innerempty p{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #936801;
+    font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.btn{
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    right: 40px;
+    bottom: 50px;
+    gap: 10px;
+    /* border: 2px solid  blue; */
+}
+.btn input{
+    width: 250px;
+    height: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 2px solid #936801;
+    background-color: #936801;
+    color: white;
+    transition: ease-in 0.3s;
+    box-shadow: inset 5px 5px 5px black;
+}
+.btn input:hover{
+    color: #fff;
+    border: 2px solid #936801;
+    background-color: #936801;
+    box-shadow: 5px 5px 5px black;
+}
+.gender{
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    /* border: 2px solid  green    ; */
+}
+.gender tr td{
+   font-size: 1rem;
+   font-weight: 300;
+   padding: 5px 5px;
+    
+   
+}
+.gender .geninput{
+    box-shadow: inset 2px 2px 2px black;
+    border-radius:50% ;
+    /* border-radius: 20px;
+   border-bottom: 2px solid black; */
+}

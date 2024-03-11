@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Validate_Register.css">
+</head>
+<body>
+        <div class="empty">
+            <div class="innerempty">
+            <button>About</button>
+            <p>Registration only happens the first time you access the system. It is a way to check your credentials.</p>   </div>   
+        </div>
+    <form action="Validate_Login.html" name="form1">
+        <div class="head"><h1>Register</h1></div>
+        
+        <div class="txt-box">
+            
+            <!-- <label for="name">Name:</label> -->
+            <input type="text" value="" pattern="[A-Za-z]+[ ]{0,3}[A-Za-z]*"  id="name" class="input" placeholder="Enter your Name" required>
+            
+
+            <!-- <label for="email">Eamil:</label> -->
+            <input title="Please enter atleast 8 characters mix of Alphabets and numbers" type="email"  id="email"  minlength="18" class="input" placeholder="Enter your Eamil" pattern="[a-z0-9._%+\-]{8,}@[a-z0-9.\-]+\.[a-z]{2,3}" required>
+            
+
+            <!-- <label for="mob">Mob No.:</label> -->
+            <input type="text" minlength="10" pattern="[0-9]{10}" required id="mob"  class="input" placeholder="Enter your Phone number">
+
+            <!-- <label for="pass">Password:</label> -->
+            <div>
+            <input type="password" value="" minlength="6" required id="pass"  class="input"  placeholder="Enter your Password"> 
+             <span style="display: none;" class="eye-icon" id="eye-open" onclick="showpass()"><i class="fa-solid fa-eye" id="open"></i></span> 
+             <span class="eye-icon" id="eye-close" onclick="showpass()"><i class="fa-solid fa-eye-slash" id="close"></i></span>     
+
+            <!-- <label for="confirmpass">Confirm Password:</label> -->
+            <input type="password" value="" minlength="6" required id="confirmpass" onchange="check()" class="input" placeholder="Confirm Password">
+            <span id="valid" style="color: red;"></span>
+            </div>  
+           
+            <div class="gender">
+                <table>
+                    <label for="gender">Gender:</label>
+                    <tr><td>Male</td>
+                    <td class="geninput"><input type="radio" name="gender" required ></td></tr>
+                    <tr><td>Feamle</td>
+                    <td class="geninput"><input type="radio" name="gender" required ></td></tr>
+                </table>
+           
+        </div>
+        
+        </div>
+        
+        
+        <div class="btn">
+            <input id="submit" type="submit" value="SUBMIT"/>
+            <input type="reset" value="CANCEL">
+        </div>
+    </form>
+   
+
+<script>
+    function check(){
+        if(document.getElementById('pass').value!=document.getElementById('confirmpass').value){
+            document.getElementById('valid').innerHTML="Password doesn't match ";
+        }
+        else{
+            document.getElementById('valid').innerHTML="";
+        }  
+    }
+
+    function showpass(){
+        let password=document.getElementById('pass');
+        let eyeOpen=document.getElementById('eye-open');
+        let eyeClose=document.getElementById('eye-close');
+        if(password.type==="password"){
+            password.type="text";
+            eyeClose.style.display="none";
+            eyeOpen.style.display="inline-block";
+        }
+        else{
+            password.type="password";
+            eyeClose.style.display="inline-block";
+            eyeOpen.style.display="none";
+        }
+    }
+</script>
+     
+</body>
+</html>
